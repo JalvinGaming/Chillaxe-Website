@@ -10,6 +10,7 @@ body
     text-align: center;
     font-size: 120px;
     margin-top: 0;
+    color: red;
 }
 @media (max-width: 1280px)
 {
@@ -25,6 +26,7 @@ body
     text-align: center;
     font-size: 70px;
     margin-top: 0;
+    color: blue;
 }
 }
 @media (max-width: 1920px)
@@ -41,5 +43,6 @@ body
     text-align: center;
     font-size: 100px;
     margin-top: 0;
+    color: yellow;
 }
 }
