@@ -3,7 +3,7 @@ body
     background-color: #3f7fff;
     color: white;
     font-family: Arial;
-    font-size: 30px;
+    font-size: 60px;
 }
 #homeheader
 {
@@ -14,15 +14,23 @@ body
 }
 @media (max-width: 1920px)
 {
-#homeheader
-{
-    font-size: 100px;
-}
+    body
+    {
+        font-size: 40px;
+    }
+    #homeheader
+    {
+        font-size: 100px;
+    }
 }
 @media (max-width: 1280px)
 {
-#homeheader
-{
-    font-size: 70px;
-}
+    body
+    {
+        font-size: 30px;
+    }
+    #homeheader
+    {
+        font-size: 70px;
+    }
 }
