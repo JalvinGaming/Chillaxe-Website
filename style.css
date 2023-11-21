@@ -1,34 +1,46 @@
+*
+{
+    margin: 0;
+    color: white;
+    font-family: Arial;
+    font-size: 40px;
+}
 body
 {
     background-color: #3f7fff;
-    color: white;
-    font-family: Arial;
-    font-size: 60px;
 }
 #homeheader
 {
     text-align: center;
-    font-size: 120px;
+    font-size: 100px;
     margin-top: 0;
-    color: white;
 }
-@media (max-width: 1920px)
+p
 {
-    body
+    margin-left: auto;
+    margin-right: auto;
+    width: 1500px;
+    margin-top: 30px;
+}
+.nomar
+{
+    margin-top: 0px;
+}
+@media (max-width: 1550px)
+{
+    p
     {
-        font-size: 40px;
+        font-size: 30px;
+        width: 1100px;
     }
     #homeheader
     {
-        font-size: 100px;
+        font-size: 80px;
     }
 }
+
 @media (max-width: 1280px)
 {
-    body
-    {
-        font-size: 30px;
-    }
     #homeheader
     {
         font-size: 70px;
