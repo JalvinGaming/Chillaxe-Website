@@ -28,9 +28,12 @@ p
 }
 @media (max-width: 1550px)
 {
-    p
+    *
     {
         font-size: 30px;
+    }
+    p
+    {
         width: 1100px;
     }
     #homeheader
