@@ -8,6 +8,7 @@
 body
 {
     background-color: #3f7fff;
+    margin-bottom: 200px;
 }
 #homeheader
 {
@@ -44,6 +45,10 @@ ul
     *
     {
         font-size: 30px;
+    }
+    body
+    {
+        margin-bottom: 150px;
     }
     p
     {
