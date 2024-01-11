@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Perspeculator</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../Chillaxe New.png">
+  </head>
+  <body>
+    <h1>Perspeculator</h1>
+    <label>X Position</label>
+    <input type="number" value="0" id="xpos" name="xpos">
+    <br>
+    <label>Y Position</label>
+    <input type="number" value="0" id="ypos" name="ypos">
+    <br>
+    <label>Z Position</label>
+    <input type="number" value="0" id="zpos" name="zpos">
+    <br>
+    <label>Pitch</label>
+    <input type="number" value="0" id="pitch" name="pitch">
+    <br>
+    <label>Yaw</label>
+    <input type="number" value="0" id="yaw" name="yaw">
+    <br>
+    <label>Focal Length</label>
+    <input type="number" value="0" id="focal" name="focal">
+    <br>
+    <input type="button" name="submitbutton" value="Calculate" id="submitbutton" onmousedown="submit()" onmouseup="release()">
+    <p id="result1">Camera-relative coordinates: </p>
+    <p id="result2">Page coordinates: </p>
+    <script>
+
+      function submit() {
+        // Calculate camera-relative coordinates
+        let xpos = document.getElementById("xpos").value;
+        var nx, ny;
+        let ypos = document.getElementById("ypos").value;
+        var ny = 0.5;
+        let zpos = document.getElementById("zpos").value;
+        var nz = 0.5;
+        let pitch = document.getElementById("pitch").value;
+        let yaw = document.getElementById("yaw").value;
+        let focal = document.getElementById("focal").value;
+        nx = (xpos * Math.cos(yaw * Math.PI / 180)) - (zpos * Math.sin(yaw * Math.PI / 180));
+        nz = (zpos * Math.cos(yaw * Math.PI / 180)) + (xpos * Math.sin(yaw * Math.PI / 180));
+        ny = (ypos * Math.cos(pitch * Math.PI / 180)) - (zpos * Math.sin(pitch * Math.PI / 180));
+        nz = (zpos * Math.cos(pitch * Math.PI / 180)) + (ypos * Math.sin(pitch * Math.PI / 180));
+
+        // Update the original variables with the calculated camera-relative coordinates
+        xpos = nx;
+        ypos = ny;
+        zpos = nz;
+
+        // Calculate page coordinates
+        nx = focal * nx / nz;
+        ny = focal * ny / nz;
+
+        // Update the result innerHTML with the new page coordinates
+        document.getElementById("result1").innerHTML = "Camera-relative coordinates: " + xpos.toFixed(3).toString() + ", " + ypos.toFixed(3).toString() + ", " + zpos.toFixed(3).toString();
+        document.getElementById("result2").innerHTML = "Page coordinates: " + nx.toFixed(3).toString() + ", " + ny.toFixed(3).toString();
+        document.getElementById("submitbutton").style.backgroundColor = "#eee";
+      }
+      function release()
+      {
+        document.getElementById("submitbutton").style.backgroundColor = "#fff";
+      }
+    </script>
+  </body>
+</html>
