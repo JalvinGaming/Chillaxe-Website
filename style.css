@@ -65,6 +65,7 @@ input[type=number]
     border-style: solid;
     margin: 5px;
     -moz-appearance: textfield;
+    appearance: textfield;
     border-radius: 10px;
 }
 input::-webkit-inner-spin-button, input::-webkit-outer-spin-button
