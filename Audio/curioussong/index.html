@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Curious Song</title>
+        <link rel="stylesheet" href="../../style.css">
+        <link rel="shortcut icon" href="../../Chillaxe New.png">
+    </head>
+    <body>
+        <audio src="whatthehellisthissong.mp3" id="audioplayername1"></audio>
+        <div class="audioplayercontrols">
+            <img src="../Speaker_Icon.svg" class="audioicon">
+            <input type="button" value="Play" onclick="document.getElementById('audioplayername1').play()">
+            <input type="button" value="Pause" onclick="document.getElementById('audioplayername1').pause()">
+            <input type="button" value="Reset" onclick="document.getElementById('audioplayername1').currentTime = '0'; document.getElementById('audioplayername1').pause()">
+        </div>
+    </body>
+</html>
