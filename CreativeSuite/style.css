@@ -1,0 +1,18 @@
+*
+{
+    margin: 0;
+    font-family: Arial;
+    font-size: 2vh;
+    overflow: hidden;
+}
+.uibutton
+{
+    width: 8vw;
+    height: 10vh;
+    background-color: #fff;
+    border: none;
+    border-radius: 2vw;
+    font-weight: 600;
+    font-size: 3vh;
+    margin: 2vh;
+}
