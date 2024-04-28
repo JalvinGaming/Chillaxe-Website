@@ -1,0 +1,24 @@
+*
+{
+    margin: 0;
+    font-size: 5mm;
+    font-family: Helvetica;
+    color: #fff;
+}
+body
+{
+    background-color: #225;
+}
+msg
+{
+    background-color: #372;
+    padding: 0.5em;
+    padding-right: 0.6em;
+    display: block;
+    margin: 0.2em;
+    border-radius: 0.8em;
+    border-bottom-left-radius: 0.2em;
+    max-width: 20em;
+    width: fit-content;
+    word-wrap: break-word;
+}
