@@ -39,6 +39,7 @@ h2
 {
     width: 400px;
     float: right;
+    object-fit: contain;
 }
 iframe
 {
