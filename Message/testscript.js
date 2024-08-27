@@ -1,17 +1,21 @@
 function start()
 {
     var setcolor = false;
-    var msgcolor = "#ffffff";
+    var msgcolor = "7f7f7f";
     if (parseInt(msgcolor, 16) > 10000000)
     {
         setcolor = true;
     }
     for (let i = 0; i < document.getElementsByTagName("msg").length; i++)
     {
-        document.getElementsByTagName("msg")[i].style.backgroundColor = msgcolor;
+        document.getElementsByTagName("msg")[i].style.backgroundColor = "#" + msgcolor;
         if (setcolor)
         {
             document.getElementsByTagName("msg")[i].style.color = "#000";
+        }
+        else
+        {
+            document.getElementsByTagName("msg")[i].style.color = "#fff";
         }
     }
     setInterval(update, 100)
