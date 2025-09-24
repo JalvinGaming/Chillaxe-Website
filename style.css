@@ -23,6 +23,15 @@ p
 {
     margin-top: 30px;
 }
+li
+{
+    line-height: 1.2em;
+    margin-bottom: 3px;
+}
+summary
+{
+    font-weight: bold;
+}
 .nomar
 {
     margin-top: 0px;
@@ -98,6 +107,38 @@ input[type=button]
     width: 2.5em;
     margin-top: -0.25em;
 }
+.deprecated
+{
+    color: red;
+}
+.docsec
+{
+    background-color: #225;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+code
+{
+    display: inline-block;
+    background-color: #55a;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    font-family: Consolas;
+    font-size: 24px;
+}
+.accordion
+{
+    background-color: #55a;
+    padding: 5px;
+    border-radius: 20px;
+}
+#boa, #toa
+{
+    text-align: center;
+}
 @media (max-width: 1550px)
 {
     *
@@ -124,6 +165,10 @@ input[type=button]
     .mappreview
     {
         width: 350px;
+    }
+    code
+    {
+        font-size: 20px;
     }
 }
 @media (max-width: 1200px)
@@ -156,6 +201,7 @@ input[type=button]
     {
         width: 100%;
     }
+<<<<<<< Updated upstream
 }
 .deprecated
 {
@@ -163,4 +209,10 @@ input[type=button]
 }
 #rebecca {
     background-color: rebeccapurple; /*o7*/
+=======
+    code
+    {
+        font-size: 16px;
+    }
+>>>>>>> Stashed changes
 }

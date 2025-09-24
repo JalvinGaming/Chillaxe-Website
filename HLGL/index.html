@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HLGL</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="shortcut icon" href="../Chillaxe New.png">
+</head>
+<body>
+    <h1>HLGL</h1>
+    <p>
+        High Level Graphics Library is a theoretical Vulkan and SDL2 wrapper that strives
+        to recreate the OpenGL-like abstraction with the modern technology
+        that Vulkan provides.
+    </p>
+    <div class="accordion" id="accd">
+        <div id="toa">Functions by Category</div>
+        <!-- Core functions -->
+        <div class="docsec">
+            <details>
+                <summary>Core Functions</summary>
+                <ul>
+                    <li><code>hl::HLContext hl::InitContext(int version[2], hl::Window wnd);</code>
+                        Initialises HLGL context with the specified version on the specified window</li>
+                    <li><code>void hl::DestroyContext(hl::HLContext ctx);</code>
+                    Destroys the specified context</li>
+                    <li><code>hl::HLContext hl::GetContext(hl::Window wnd);</code>
+                    Gets the context attached to this window</li>
+                </ul>
+            </details>
+        </div>
+        <!-- Window functions -->
+        <div class="docsec">
+            <details>
+                <summary>Window Functions</summary>
+                <ul>
+                    <li><code>hl::Window hl::CreateWindow(int width, int height);</code>
+                    Creates a window with the specified width and height, automatically
+                    creates a context and framebuffer</li>
+                    <li><code>void hl::SwapBuffers(hl::Window wnd);</code>
+                    Render the framebuffer to the screen</li>
+                    <li><code>void hl::DestroyWindow(hl::Window wnd);</code>
+                    Destroys the specified window</li>
+                </ul>
+            </details>
+        </div>
+        <!-- Framebuffer functions -->
+        <div class="docsec">
+            <details>
+                <summary>Framebuffer Functions</summary>
+                <ul>
+                    <li><code>hl::FBuffer hl::CreateFBuffer(hl::Window wnd);</code>
+                    Creates a framebuffer for the specified window</li>
+                    <li><code>void hl::DestroyFBuffer(hl::FBuffer fb);</code>
+                    Destroys the specified framebuffer</li>
+                    <li><code>hl::FBuffer[] hl::GetFBuffersW(hl::Window wnd);</code>
+                    Gets the framebuffers attached to the specified window's context</li>
+                    <li><code>hl::FBuffer[] hl::GetFBuffersC(hl::HLContext ctx);</code>
+                        Gets the framebuffers attached to the specified context</li>
+                </ul>
+            </details>
+        </div>
+        <!-- Rendering functions -->
+         <div class="docsec">
+            <details>
+                <summary>Rendering Functions</summary>
+                <ul>
+                    <li><code>void hl::FBuffer::RenderTriangleBasic(hl::Vec2 v1, hl::Vec2 v2, hl::Vec2 v3, hl::Vec3 color);</code>
+                    Renders a triangle with three points and a colour</li>
+                    <li><code>void hl::FBuffer::RenderTrianglesShaded(hl::Vec3 vertices[], hl::ShaderProgram prog);</code>
+                    Renders an array of triangles using shaders and parameters</li>
+                    <li><code>void hl::FBuffer::RenderMesh(hl::Mesh mesh);</code>
+                    Renders a mesh</li>
+                </ul>
+            </details>
+         </div>
+         <!-- Mesh Functions -->
+          <div class="docsec">
+            <details>
+                <summary>Mesh Functions</summary>
+                <ul>
+                    <li><code>hl::Mesh hl::CreateMesh(float vertices[], hl::ShaderProgram prog);</code>
+                    Creates a mesh with shaders and parameters</li>
+                    <li><code>void hl::DestroyMesh(hl::Mesh mesh);</code>
+                    Destroys the specified mesh</li>
+                    <li><code>void hl::Mesh::Translate(hl::Vector3 trn);</code>
+                    Translates the mesh by the specified amount</li>
+                </ul>
+            </details>
+          </div>
+          <div class="docsec">
+            <details>
+                <summary>Shader Functions</summary>
+                <ul>
+                    <li><code>hl::ShaderProgram hl::CreateProgram(const char* vSrc, const char* fSrc, hl::ParamOptions pops);</code>
+                    Creates a shader program using GLSL and program options</li>
+                    <li><code>void hl::ChangeParams(hl::ParamOptions pops);</code>
+                    Changes the vertex parameters' behaviour</li>
+                    <li><code>void hl::ParamOptions::AppendParam(int location, int sizeb);</code>
+                    Adds a parameter to the specified ParamOptions, with the specified size in bytes</li>
+                    <li><code>void hl::ParamOptions::RemoveParam(int location);</code>
+                    Removes the specified parameter</li>
+                </ul>
+            </details>
+          </div>
+        <div id="boa">Open function boxes to reveal functions related to that topic.</div>
+    </div>
+</body>
+</html>
